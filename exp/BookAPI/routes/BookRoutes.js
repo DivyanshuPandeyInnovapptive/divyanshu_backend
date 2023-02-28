@@ -7,6 +7,7 @@ routing.get("/", async (req, res) => {
     const books = await bookControllers.getBooks();
     res.status(200).json({
       result: "success",
+      length: books.length,
       data: {
         message: "Books fetched successfully",
         books,

@@ -50,7 +50,7 @@ const updateBook = async (id, book) => {
 
 const deleteBook = async (id) => {
   try {
-    await Book.findByIdAndDeletet(id);
+    await Book.findByIdAndDelete(id);
   } catch (err) {
     throw new Error("Cannot delete book: " + err);
   }
