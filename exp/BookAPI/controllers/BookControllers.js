@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Book = require("../models/Book");
 
 const getBooks = async () => {
@@ -31,6 +30,7 @@ const addBook = async (book) => {
 const addBooks = async (books) => {
   try {
     const bks = [];
+    console.log("Before: ", books);
     for (const book of books) {
       bks.push(addBook(book));
     }

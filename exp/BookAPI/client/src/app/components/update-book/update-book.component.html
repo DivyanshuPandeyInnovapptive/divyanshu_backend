@@ -1,0 +1,45 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label for="bookName">Book Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="bookName"
+      formControlName="bookName"
+      placeholder="Enter Book Name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="authorName">Author Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="authorName"
+      formControlName="authorName"
+      placeholder="Enter Author Name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="price">Price: </label>
+    <input
+      type="text"
+      class="form-control"
+      id="price"
+      formControlName="price"
+      placeholder="Enter Price"
+    />
+  </div>
+  <div class="form-group">
+    <label for="premiumPrice">Premium Price: </label>
+    <input
+      type="text"
+      class="form-control"
+      id="premiumPrice"
+      formControlName="premiumPrice"
+      placeholder="Enter Premium Price"
+    />
+  </div>
+  <div class="mt-2 mb-2">
+    <button type="submit" class="btn btn-primary">Update Book</button>
+  </div>
+</form>

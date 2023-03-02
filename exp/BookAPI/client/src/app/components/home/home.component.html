@@ -1,0 +1,18 @@
+<div class="book-container" *ngFor="let book of books">
+  <div class="card card-c">
+    <h2><b>Book Name: </b>{{ book.bookName }}</h2>
+    <h3><b>Author Name: </b>{{ book.authorName }}</h3>
+    <h4>
+      <b>Price: </b>{{ book.price.non_sub_user }}
+      <small>[<b>Premium: </b> {{ book.price.sub_user }}]</small>
+    </h4>
+    <div style="display: flex; justify-content: space-between">
+      <p><b>Created at: </b>{{ book.createdAt!.slice(0, 10) }}</p>
+      <p><b>Updated at: </b>{{ book.updatedAt!.slice(0, 10) }}</p>
+    </div>
+    <div class="button-card">
+      <button class="btn btn-primary" (click)="updateBook(book)">Update</button>
+      <button class="btn btn-danger" (click)="deleteBook(book)">Delete</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.card-c {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.button-card {
+    display: flex;
+    justify-content: space-between;
+}

@@ -26,6 +26,7 @@ routing.get("/", async (req, res) => {
 
 routing.post("/", async (req, res) => {
   try {
+    console.log(req.body.books);
     await bookControllers.addBooks(req.body.books);
     res.status(200).json({
       result: "success",
@@ -67,6 +68,7 @@ routing.get("/:id", async (req, res) => {
 
 routing.patch("/:id", async (req, res) => {
   try {
+    req.body.updated_at = new Date();
     await bookControllers.updateBook(req.params.id, req.body);
     res.status(200).json({
       result: "success",
